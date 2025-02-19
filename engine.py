@@ -56,6 +56,7 @@ class Object:
 
     def crash(obj1,obj2):
         distance = ((obj1.p_x-obj2.p_x)**2+(obj1.p_y-obj2.p_y)**2)**0.5
+        """
         moment = ((obj1.m_x-obj2.m_x)**2+(obj1.m_y-obj2.m_y)**2)**0.5
         obj1_theata = math.atan2(obj2.p_y-obj1.p_y,obj2.p_x-obj1.p_x) - math.atan2(obj1.m_y-obj2.m_y,obj1.m_x-obj2.m_x)
         obj1_theata = obj1_theata + 2*math.pi if -math.pi >= obj1_theata else obj1_theata - 2*math.pi if obj1_theata >= math.pi else obj1_theata
@@ -82,7 +83,7 @@ class Object:
             obj2_affect_x = math.cos(obj2_tan)*cos_obj2
             obj2_affect_y = math.sin(obj2_tan)*cos_obj2
             #print(obj1_affect_x,obj2_affect_x,obj1_affect_y,obj2_affect_y)
-            """
+            #"""
             obj1.affected(obj2_affect_x,obj2_affect_y)
             obj2.affected(obj1_affect_x,obj1_affect_y)
 
